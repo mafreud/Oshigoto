@@ -1,6 +1,5 @@
 {
-  "dart.flutterSdkPaths": [
-    "/Users/masahiroaoki/fvm/versions"
-  ],
-  "dart.flutterSdkPath": "/Users/masahiroaoki/fvm/versions/stable"
+  "dart.flutterSdkPaths": ["/Users/rafekun/fvm/versions"],
+  "dart.flutterSdkPath": "/Users/rafekun/fvm/versions/stable",
+  "cSpell.words": ["oshigoto"]
 }
