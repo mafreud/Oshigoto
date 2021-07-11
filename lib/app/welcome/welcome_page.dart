@@ -37,7 +37,7 @@ class WelcomePage extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: screenWidth / 7),
             child: const Text(
-              'Flutter案件をググってもすぐでてこない。\nOshigotoでFlutter案件をさくっとみつけちゃいましょう。',
+              'Flutter案件をググってもすぐでてこない。\nOshigotoでFlutter案件を\nさくっとみつけちゃいましょう。',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: OshigotoColors.primaryGray,

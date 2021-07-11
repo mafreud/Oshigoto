@@ -93,11 +93,11 @@ class JobDetailsPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          '業務経験',
+                          '契約形態',
                           style: TextStyle(color: OshigotoColors.primaryGray),
                         ),
                         Text(
-                          '最低1年',
+                          '業務委託',
                           style: TextStyle(color: OshigotoColors.primaryWhite),
                         ),
                       ],
@@ -114,11 +114,11 @@ class JobDetailsPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          '業務経験',
+                          '報酬',
                           style: TextStyle(color: OshigotoColors.primaryGray),
                         ),
                         Text(
-                          '最低1年',
+                          '応相談',
                           style: TextStyle(color: OshigotoColors.primaryWhite),
                         ),
                       ],
