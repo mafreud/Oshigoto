@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oshigoto/app/job/job_details/job_details_page.dart';
 import 'package:oshigoto/oshigoto_colors.dart';
 
 class HomePage extends StatelessWidget {
@@ -7,7 +8,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
-
     return Scaffold(
       backgroundColor: OshigotoColors.primaryBlack,
       body: SafeArea(
@@ -56,75 +56,81 @@ class _Card extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        left: 12,
-        top: 3,
-        right: 12,
-        bottom: 3,
-      ),
-      child: Card(
-        elevation: 5,
-        color: OshigotoColors.secondaryBlack,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            const SizedBox(
-              height: 3,
-            ),
-            const ListTile(
-              leading: FlutterLogo(
-                size: 40,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => JobDetailsPage()));
+      },
+      child: Padding(
+        padding: const EdgeInsets.only(
+          left: 12,
+          top: 3,
+          right: 12,
+          bottom: 3,
+        ),
+        child: Card(
+          elevation: 5,
+          color: OshigotoColors.secondaryBlack,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              const SizedBox(
+                height: 3,
               ),
-              title: Text(
-                'Flutter + Firebaseエンジニア',
-                style: TextStyle(
-                  color: OshigotoColors.primaryWhite,
-                  fontSize: 17,
-                  fontWeight: FontWeight.bold,
+              const ListTile(
+                leading: FlutterLogo(
+                  size: 40,
                 ),
-              ),
-              subtitle: Text(
-                '(株)アットゲーム',
-                style: TextStyle(
-                  color: OshigotoColors.primaryGray,
-                  fontSize: 13,
-                ),
-              ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(left: 30, bottom: 12),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        elevation: 0, primary: OshigotoColors.secondaryGrey),
-                    onPressed: () {},
-                    child: Text('副業'),
+                title: Text(
+                  'Flutter + Firebaseエンジニア',
+                  style: TextStyle(
+                    color: OshigotoColors.primaryWhite,
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 12, bottom: 12),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        elevation: 0, primary: OshigotoColors.secondaryGrey),
-                    onPressed: () {},
-                    child: Text('1年~'),
+                subtitle: Text(
+                  '(株)アットゲーム',
+                  style: TextStyle(
+                    color: OshigotoColors.primaryGray,
+                    fontSize: 13,
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 12, bottom: 12),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        elevation: 0, primary: OshigotoColors.secondaryGrey),
-                    onPressed: () {},
-                    child: Text('フルリモート'),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30, bottom: 12),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          elevation: 0, primary: OshigotoColors.secondaryGrey),
+                      onPressed: () {},
+                      child: Text('副業'),
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                  Padding(
+                    padding: const EdgeInsets.only(left: 12, bottom: 12),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          elevation: 0, primary: OshigotoColors.secondaryGrey),
+                      onPressed: () {},
+                      child: Text('1年~'),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 12, bottom: 12),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          elevation: 0, primary: OshigotoColors.secondaryGrey),
+                      onPressed: () {},
+                      child: Text('フルリモート'),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
